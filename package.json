@@ -1,0 +1,15 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dockerize": "docker build -t leap/hello-world:local . && docker save leap/hello-world > hello-world.tar && sudo microk8s ctr image import hello-world.tar"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "chalk": "^5.0.0",
+    "express": "^4.17.2"
+  },
+  "type": "module"
+}
